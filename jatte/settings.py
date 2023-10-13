@@ -29,6 +29,12 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'account.User'
 
+CHANNEL_LAYERS = {
+    'default':{
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    }
+}
+
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/chat-admin/'
 LOGOUT_REDIRECT_URL = '/'
